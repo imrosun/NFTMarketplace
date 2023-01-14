@@ -9,7 +9,6 @@
 .navbar_container{
     width: 80%;
     margin:  0 auto;
-
     display:  grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -50,7 +49,6 @@
 }
 
 /* //-------RIGHT */
-
 .navbar_container_right{
     display: grid;
     grid-template-columns: 1fr 1fr .5fr 1fr .3fr;
@@ -112,7 +110,6 @@
 }
 
 /* /////------SIDEBAR */
-
 .sideBar{
     position: fixed;
     top: 0;
