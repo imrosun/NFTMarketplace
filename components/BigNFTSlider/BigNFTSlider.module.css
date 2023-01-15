@@ -30,8 +30,8 @@
     padding: 1rem;
     background-color: var(--main-bg-color);
     border-radius: 2.5rem;
-    /* box-shadow: var(--box-shadow-2); */
-    box-shadow: var(--main-bg-color);
+    box-shadow: var(--box-shadow-2);
+    /* box-shadow: var(--main-bg-color); */
 }
 
 /* //CREATOR SECTION */
@@ -107,6 +107,7 @@
     border-bottom:  1px solid var(--shadow-dark-color);
 }
 
+
 .bigNFTSlider_box_left_bidding_box_timer_item p{
     font-size: 2rem;
     font-weight: 900;
@@ -164,12 +165,13 @@
     border-radius: 5rem;
 }
 
+
 @media screen and (max-width: 65em) {
     .bigNFTSlider_box{
         width: 90%;
         padding-top: 28rem;
         grid-template-columns: 1fr;
-        gap: 1rem; 
+        gap: 1rem;
     }
 
     .bigNFTSlider_box_left{
@@ -184,12 +186,13 @@
 
     .bigNFTSlider_box_left_creator{
         gap: 1rem;
-        grid-template-columns: 1.3fr 1fr;
+        grid-template-columns: 1.8fr 1fr;
     }
 
     .bigNFTSlider_box_left_creator_profile_info{
         font-size: .8rem;
         line-height: 1;
+     
     }
 
     .bigNFTSlider_box_left_creator_collection_icon{
