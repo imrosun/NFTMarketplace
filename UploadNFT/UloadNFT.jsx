@@ -67,6 +67,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
         fileSize={fileSize}
         category={category}
         properties={properties}
+        image={images.upload}
         setImage={setImage}
         uploadToIPFS={uploadToIPFS}
       />
@@ -76,7 +77,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
           <label htmlFor="nft">Item Name</label>
           <input
             type="text"
-            placeholder="shoaib bhai"
+            placeholder="Roshan Sharma"
             className={formStyle.Form_box_input_userName}
             onChange={(e) => setName(e.target.value)}
           />

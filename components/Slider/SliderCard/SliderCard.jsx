@@ -25,7 +25,7 @@ const SliderCard = ({ el, i }) => {
           <p>NFT Video #{i + 1}</p>
           <div className={Style.sliderCard_box_title_like}>
             {/* <LikeProfile /> */}
-            <small>{i + 4} 0f 10</small>
+            <small>{i + 4} 0f 9</small>
           </div>
         </div>
 

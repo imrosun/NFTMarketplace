@@ -31,7 +31,7 @@ const FollowerTabCard = ({ i, el }) => {
             // src={images.creatorbackground1}
             src={el.background || images[`creatorbackground${i + 1}`]}
             alt="profile braground"
-            width={280}
+            width={250}
             height={200}
             objectFit="cover"
           />

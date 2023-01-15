@@ -121,7 +121,7 @@ const NFTDescription = ({ nft }) => {
             {social && (
               <div className={Style.NFTDescription_box_share_box_social}>
                 <a href="#">
-                  <TiSocialFacebook /> Facebooke
+                  <TiSocialFacebook /> Facebook
                 </a>
                 <a href="#">
                   <TiSocialInstagram /> Instragram
@@ -164,7 +164,7 @@ const NFTDescription = ({ nft }) => {
         {/* //Part TWO */}
         <div className={Style.NFTDescription_box_profile}>
           <h1>
-            {nft.name} #{nft.tokenId}
+            {nft.name || "NotX"} #{nft.tokenId || 971}
           </h1>
           <div className={Style.NFTDescription_box_profile_box}>
             <div className={Style.NFTDescription_box_profile_box_left}>
@@ -251,7 +251,7 @@ const NFTDescription = ({ nft }) => {
               >
                 <small>Current Bid</small>
                 <p>
-                  {nft.price} ETH <span>( ≈ $3,221.22)</span>
+                  {nft.price || 1} ETH <span>( ≈ $3,221.22)</span>
                 </p>
               </div>
 
@@ -280,6 +280,12 @@ const NFTDescription = ({ nft }) => {
                   classStyle={Style.button}
                 />
               )} */}
+              <Button
+                  icon=<FaWallet />
+                  btnName="Buy NFT"
+                  handleClick={() => buyNFT(nft)}
+                  classStyle={Style.button}
+                />
 
               <Button
                 icon=<FaPercentage />

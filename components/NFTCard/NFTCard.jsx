@@ -10,7 +10,6 @@ import images from "../../images";
 
 const NFTCard = ({ NFTData }) => {
 
-    // const featureArray = [1,2,3,4,5,6,7,8,9];
   const CardArray = [
     images.nft_image_1,
     images.nft_image_2,
@@ -41,8 +40,7 @@ const NFTCard = ({ NFTData }) => {
           <div className={Style.NFTCard_box} key={i + 1}>
             <div className={Style.NFTCard_box_img}>
               <Image
-                src={images.nft_image_1}
-                // src={el.image}
+                src={el}
                 alt="NFT images"
                 width={400}
                 height={400}
@@ -79,7 +77,7 @@ const NFTCard = ({ NFTData }) => {
               <div className={Style.NFTCard_box_update_details_price}>
                 <div className={Style.NFTCard_box_update_details_price_box}>
                   <h4>
-                    {el.name} #{el.tokenId}
+                    {el.name || "Clone"} #{el.tokenId || 971}
                   </h4>
 
                   <div
@@ -89,7 +87,7 @@ const NFTCard = ({ NFTData }) => {
                       className={Style.NFTCard_box_update_details_price_box_bid}
                     >
                       <small>Current Bid</small>
-                      <p>{el.price}ETH</p>
+                      <p>{el.price || 12.00}ETH</p>
                     </div>
                     <div
                       className={

@@ -10,28 +10,28 @@ import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../images";
 
 //SMART CONTRACT IMPORT
-import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+// import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const searchPage = () => {
-  const { fetchNFTs, setError, currentAccount } = useContext(
-    NFTMarketplaceContext
-  );
+  // const { fetchNFTs, setError, currentAccount } = useContext(
+  //   NFTMarketplaceContext
+  // );
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 
-  useEffect(() => {
-    try {
-      if (currentAccount) {
-        fetchNFTs().then((items) => {
-          setNfts(items.reverse());
-          setNftsCopy(items);
-          console.log(nfts);
-        });
-      }
-    } catch (error) {
-      setError("Please reload the browser", error);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     if (currentAccount) {
+  //       fetchNFTs().then((items) => {
+  //         setNfts(items.reverse());
+  //         setNftsCopy(items);
+  //         console.log(nfts);
+  //       });
+  //     }
+  //   } catch (error) {
+  //     setError("Please reload the browser", error);
+  //   }
+  // }, []);
 
   const onHandleSearch = (value) => {
     const filteredNFTS = nfts.filter(({ name }) =>
@@ -51,16 +51,32 @@ const searchPage = () => {
     }
   };
 
-  // const collectionArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  // ];
+  const collectionArray = [
+    {
+      image: images.nft_image_1
+    },
+    {
+      image: images.nft_image_2
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    },
+    {
+      image: images.nft_image_3,
+    },
+    {
+      image: images.nft_image_1,
+    },
+    {
+      image: images.nft_image_2,
+    }
+  ];
   return (
     <div className={Style.searchPage}>
       <Banner bannerImage={images.creatorbackground2} />
@@ -69,7 +85,8 @@ const searchPage = () => {
         onClearSearch={onClearSearch}
       />
       <Filter />
-      {nfts.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />}
+      <NFTCardTwo NFTData={collectionArray} />
+      {/* {nfts.length == 0 ? <Loader /> : <NFTCardTwo NFTData={nfts} />} */}
       <Slider />
       <Brand />
     </div>

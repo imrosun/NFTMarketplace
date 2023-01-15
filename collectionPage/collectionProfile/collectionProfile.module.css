@@ -67,7 +67,7 @@
 .collectionProfile_box_middle_box{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     background-color: var(--main-bg-color);
     margin-top: 1.5rem;
 }
@@ -75,7 +75,7 @@
 .collectionProfile_box_middle_box_item{
     background-color: var(--main-bg-color);
     box-shadow: var(--box-shadow-2);
-    padding: 3rem 2rem;
+    padding: 2rem 1rem;
     border-radius: 2rem;
     line-height: 0;
     text-align: center;
@@ -88,7 +88,7 @@
 
 .collectionProfile_box_middle_box_item small{
     display: block;
-    line-height: 3;
+    line-height: 2;
 }
 
 .collectionProfile_box_middle_box_item span{
@@ -96,7 +96,7 @@
 }
 
 
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 30em) {
     .collectionProfile_box{
         width: 90%;
         grid-template-columns: 1fr;

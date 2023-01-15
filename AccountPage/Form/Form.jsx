@@ -20,7 +20,7 @@ const Form = () => {
             <label htmlFor="name">Username</label>
             <input
               type="text"
-              placeholder="shoaib bhai"
+              placeholder="Roshan Sharma"
               className={Style.Form_box_input_userName}
             />
           </div>
@@ -42,7 +42,7 @@ const Form = () => {
               id=""
               cols="30"
               rows="6"
-              placeholder="something about yourself in few words"
+              placeholder="Full Stack Developer"
             ></textarea>
           </div>
 
@@ -53,7 +53,7 @@ const Form = () => {
                 <MdOutlineHttp />
               </div>
 
-              <input type="text" placeholder="website" />
+              <input type="text" placeholder="https://roshan-sharma.vercel.app/" />
             </div>
           </div>
 
@@ -64,7 +64,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialFacebook />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="" />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -73,7 +73,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialTwitter />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="imrosun" />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -82,7 +82,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialInstagram />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="" />
               </div>
             </div>
           </div>

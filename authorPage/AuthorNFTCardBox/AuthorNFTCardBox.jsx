@@ -16,31 +16,86 @@ const AuthorNFTCardBox = ({
   nfts,
   myNFTS,
 }) => {
-  // const collectiablesArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  // ];
+  const collectiablesArray = [
+    {
+      background: images.creatorbackground1,
+      image: images.nft_image_1,
+    },
+    {
+      background: images.creatorbackground2,
+      image: images.nft_image_2,
+    },
+    {
+      background: images.creatorbackground3,
+      image: images.nft_image_3,
+    },
+    {
+      background: images.creatorbackground4,
+      image: images.nft_image_1,
+    },
+    {
+      background: images.creatorbackground5,
+      image: images.nft_image_2,
+    },
+    {
+      background: images.creatorbackground6,
+      image: images.nft_image_3,
+    },
+  ];
 
-  // const createdArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  // ];
+  const createdArray = [
+   {
+      background: images.creatorbackground1,
+      image: images.user1,
+    },
+    {
+      background: images.creatorbackground2,
+      image: images.user2,
+    },
+    {
+      background: images.creatorbackground3,
+      image: images.user3,
+    },
+    {
+      background: images.creatorbackground4,
+      image: images.user4,
+    },
+    {
+      background: images.creatorbackground5,
+      image: images.user5,
+    },
+    {
+      background: images.creatorbackground6,
+      image: images.user6,
+    },
+  ];
 
-  // const likeArray = [
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  //   images.nft_image_3,
-  //   images.nft_image_1,
-  //   images.nft_image_2,
-  // ];
+  const likeArray = [
+    {
+      background: images.creatorbackground1,
+      image: images.user1,
+    },
+    {
+      background: images.creatorbackground2,
+      image: images.user2,
+    },
+    {
+      background: images.creatorbackground3,
+      image: images.user3,
+    },
+    {
+      background: images.creatorbackground4,
+      image: images.user4,
+    },
+    {
+      background: images.creatorbackground5,
+      image: images.user5,
+    },
+    {
+      background: images.creatorbackground6,
+      image: images.user6,
+    },
+  ];
 
   const followerArray = [
     {
@@ -104,9 +159,9 @@ const AuthorNFTCardBox = ({
   ];
   return (
     <div className={Style.AuthorNFTCardBox}>
-      {collectiables && <NFTCardTwo NFTData={nfts} />}
-      {created && <NFTCardTwo NFTData={myNFTS} />}
-      {like && <NFTCardTwo NFTData={nfts} />}
+      {collectiables && <NFTCardTwo NFTData={collectiablesArray} />}
+      {created && <NFTCardTwo NFTData={createdArray} />}
+      {like && <NFTCardTwo NFTData={likeArray} />}
       {follower && (
         <div className={Style.AuthorNFTCardBox_box}>
           {followerArray.map((el, i) => (
