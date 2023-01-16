@@ -18,10 +18,10 @@ const loginAndSignUp = () => {
       social: images.twitter,
       name: "Continue with twitter",
     },
-    {
-      social: images.facebook,
-      name: "Continue with Facebook",
-    },
+    // {
+    //   social: images.facebook,
+    //   name: "Continue with Facebook",
+    // },
   ];
   return (
     <div className={Style.user}>
