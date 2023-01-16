@@ -10,12 +10,12 @@ import { NFTCardTwo, Banner } from "../collectionPage/collectionIndex";
 import images from "../images";
 
 //SMART CONTRACT IMPORT
-// import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const searchPage = () => {
-  // const { fetchNFTs, setError, currentAccount } = useContext(
-  //   NFTMarketplaceContext
-  // );
+  const { fetchNFTs, setError, currentAccount } = useContext(
+    NFTMarketplaceContext
+  );
   const [nfts, setNfts] = useState([]);
   const [nftsCopy, setNftsCopy] = useState([]);
 

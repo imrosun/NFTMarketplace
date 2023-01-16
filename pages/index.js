@@ -12,8 +12,17 @@ import { HeroSection,
   Video,
 } from "../components/componentsindex"
 
+//IMPORTING CONTRCT DATA
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home = () => {
+  // const { checkIfWalletConnected, currentAccount } = useContext(
+  //   NFTMarketplaceContext
+  // );
+  // useEffect(() => {
+  //   checkIfWalletConnected();
+  // }, []);
+
   return (
     <div className={Style.homePage}>
       <HeroSection />

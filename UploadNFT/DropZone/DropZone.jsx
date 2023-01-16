@@ -43,7 +43,7 @@ const DropZone = ({
           <p>{title}</p>
           <div className={Style.DropZone_box_input_img}>
             <Image
-              // src={images}
+
               src={images.upload}
               alt="upload"
               width={100}

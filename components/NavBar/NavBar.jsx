@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 // IMPORT ICONS
@@ -10,6 +10,8 @@ import Style from "./NavBar.module.css";
 import {Discover, HelpCenter, Notification, Profile, SideBar} from "./index";
 import {Button} from "../componentsindex";
 import images from "../../images";
+// SMART CONTRACT IMPORT
+import { NFTMarketplaceContext } from '../../Context/NFTMarketplaceContext';
 const NavBar = () => {
     //---USESTATE COMPONENT
     const [discover, setDiscover] = useState(false);
@@ -67,6 +69,9 @@ const NavBar = () => {
         }
     };
 
+    //SMART CONTRACT
+    const {currentAccount, connectWallet} = useContext(NFTMarketplaceContext);
+
     return (
         <div className={Style.navbar}>
             <div className={Style.navbar_container}>
@@ -114,15 +119,22 @@ const NavBar = () => {
                     </div>
                     {/* CREATE BUTTON SECTION */}
                     <div className={Style.navbar_container_right_button}>
-                        <Button btnText = "Create" handleClick={()=> {}}/>
-                        {/* {currentAccount == "" ? (
+                        {/* <Button btnText = "Create" handleClick={()=> {}}/> */}
+                        {/* <Button
+                            btnName="Create"
+                            handleClick={() => router.push("/uploadNFT")}
+                        /> */}
+                        {currentAccount == "" ? (
                         <Button btnName="Connect" handleClick={() => connectWallet()} />
                         ) : (
+                            // 15:56:44 <Link href={{pathname: "/uploadNFT"}}>
+                        <a href="/uploadNFT">
                         <Button
                             btnName="Create"
                             handleClick={() => router.push("/uploadNFT")}
                         />
-                        )} */}
+                        </a>
+                        )}
                     </div>
                     {/* USER PROFILE */}
                     <div className={Style.navbar_container_right_profile_box}>
@@ -152,8 +164,8 @@ const NavBar = () => {
                 <div className={Style.sideBar}>
                 <SideBar
                     setOpenSideMenu={setOpenSideMenu}
-                    // currentAccount={currentAccount}
-                    // connectWallet={connectWallet}
+                    currentAccount={currentAccount}
+                    connectWallet={connectWallet}
                 />
                 </div>
             )}
